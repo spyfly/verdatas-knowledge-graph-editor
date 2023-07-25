@@ -1,6 +1,3 @@
-import { useState } from 'preact/hooks'
-import preactLogo from './assets/preact.svg'
-import viteLogo from '/vite.svg'
 import { ReactSortable } from "react-sortablejs";
 import Form from 'react-bootstrap/Form';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -13,6 +10,8 @@ import Col from 'react-bootstrap/Col';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { KnowledgeGraphEditor } from './knowledgeGraphEditor';
 import { Component } from 'preact';
+import { KnowledgeGraphParser } from "./knowledgeGraphParser";
+import { KnowledgeGraphObject } from "./knowledgeGraphObject";
 
 export class App extends Component {
   constructor() {
@@ -42,6 +41,18 @@ export class App extends Component {
       title: "Test5",
       objectId: "test5"
     }];
+
+    this.initItemList();
+  }
+
+  async initItemList() {
+    const knowledgeGraphXmlReq = await fetch('./raw-knowledge-graph.xml');
+    const knowledgeGraphXml = await knowledgeGraphXmlReq.text();
+    const kgParser = new KnowledgeGraphParser(knowledgeGraphXml);
+    const topicObjects = kgParser.extractTopicObjects();
+    console.log(topicObjects)
+    this.initialList = topicObjects;
+    this.forceUpdate();
   }
 
   onChange = (newKnowledgeGraph) => {
@@ -121,7 +132,8 @@ export class App extends Component {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col lg={4} >
+            <h2>Knowledge Graph Objects</h2>
             <ListGroup>
               <ReactSortable
                 // here they are!
@@ -133,12 +145,13 @@ export class App extends Component {
                 delay={2}
               >
                 {this.initialList.map((item) => (
-                  <ListGroup.Item key={item.objectId}>{item.title}</ListGroup.Item>
+                  <KnowledgeGraphObject item={item} />
                 ))}
               </ReactSortable>
             </ListGroup>
           </Col>
-          <Col>
+          <Col lg={8}>
+            <h2>Learning Path</h2>
             <KnowledgeGraphEditor knowledgeGraph={this.initKnowledgeGraph} onChange={this.onChange} />
           </Col>
         </Row>

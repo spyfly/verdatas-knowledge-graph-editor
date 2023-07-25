@@ -4,6 +4,7 @@ import { ListCheck, SignTurnRight } from 'react-bootstrap-icons';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Component } from 'preact';
+import { KnowledgeGraphObject } from "./knowledgeGraphObject";
 
 export class KnowledgeGraphEditor extends Component {
     constructor(props) {
@@ -58,8 +59,8 @@ export class KnowledgeGraphEditor extends Component {
     render() {
       const knowledgeGraph = this.state.knowledgeGraph;
       const self = this;
-      return <ListGroup>
-        <ReactSortable
+      return <ListGroup className="h-100 w-100">
+        <ReactSortable className="h-100 w-100"
           // here they are!
           list={knowledgeGraph}
           setList={self.rootSetter}
@@ -69,7 +70,7 @@ export class KnowledgeGraphEditor extends Component {
           delay={2}
         >
           {knowledgeGraph.map((item) => (
-            <ListGroup.Item key={item.objectId}>{item.title}
+            <KnowledgeGraphObject item={item}>
               <Row>
                 <Col className="d-flex flex-row justify-content-between">
                   <ListCheck title="Requirements" className="p-1" color="red" size={24} />
@@ -81,7 +82,7 @@ export class KnowledgeGraphEditor extends Component {
                       }}
                       group="knowledgePathEditor">
                       {item.requirements && item.requirements.map((requirement) => (
-                        <ListGroup.Item variant="danger" key={requirement.objectId}>{requirement.title}</ListGroup.Item>
+                        <KnowledgeGraphObject variant="danger" item={requirement} />
                       ))}
                     </ReactSortable>
                   </ListGroup>
@@ -96,13 +97,13 @@ export class KnowledgeGraphEditor extends Component {
                       }}
                       group="knowledgePathEditor">
                       {item.alternatives && item.alternatives.map((alternative) => (
-                        <ListGroup.Item variant="success" key={alternative.objectId}>{alternative.title}</ListGroup.Item>
+                        <KnowledgeGraphObject variant="success" item={alternative} />
                       ))}
                     </ReactSortable>
                   </ListGroup>
                 </Col>
               </Row>
-            </ListGroup.Item>
+            </KnowledgeGraphObject>
           ))}
         </ReactSortable>
       </ListGroup>

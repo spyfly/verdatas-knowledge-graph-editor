@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<verDatAs:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:verDatAs="http://some-company/schema/verDatAs" xmlns:verDatAsDi="http://some-company/schema/verDatAsDi" id="sample-diagram">
+  <verDatAs:knowledgeGraph id="Graph_1">
+    <verDatAs:topic id="Topic_1" name="Elektrofachkraft für festgelegte Tätigkeiten" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=crs_178&#38;client_id=default&#38;obj_id_lrs=628">
+      <verDatAs:module id="Module_05qzvez" name="Praxisaufgabe Thermografische Untersuchung eines Schaltschranks" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=lm_193&#38;client_id=default&#38;obj_id_lrs=646">
+        <verDatAs:chapter id="Chapter_10g0hh6" name="Ausgangssituation im Betrieb" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=st_611_193&#38;client_id=default&#38;obj_id_lrs=646">
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_612_193&#38;client_id=default&#38;obj_id_lrs=646" title="Arbeitsauftrag zur Praxisaufgabe" />
+        </verDatAs:chapter>
+        <verDatAs:chapter id="Chapter_0edffyh" name="Was ist Thermografie in der Elektrotechnik?" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=st_613_193&#38;client_id=default&#38;obj_id_lrs=646">
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_614_193&#38;client_id=default&#38;obj_id_lrs=646" title="Thermografie in der Elektrotechnik" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_615_193&#38;client_id=default&#38;obj_id_lrs=646" title="Messgeräte der Thermografie" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_616_193&#38;client_id=default&#38;obj_id_lrs=646" title="Quiz: Messgeräte der Thermografie">
+            <verDatAs:interactiveTask id="InteractiveTask_0p8ee9u" name="Quiz Messgeräte der Elektrothermografie" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_616_193&#38;client_id=default&#38;h5p_object_id=12&#38;obj_id_lrs=646" />
+          </verDatAs:contentPage>
+        </verDatAs:chapter>
+        <verDatAs:chapter id="Chapter_1e4m01z" name="Vorbereitung und Überblick zur Thermografie-Messung" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=st_617_193&#38;client_id=default&#38;obj_id_lrs=646">
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_618_193&#38;client_id=default&#38;obj_id_lrs=646" title="Werkzeug für die Arbeitsaufgabe" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_619_193&#38;client_id=default&#38;obj_id_lrs=646" title="Thermografiemessung ohne Entfernen der Abdeckblenden " />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_620_193&#38;client_id=default&#38;obj_id_lrs=646" title="Quiz: Leitungsbelastbarkeit">
+            <verDatAs:interactiveTask id="InteractiveTask_1vfyx28" name="Quiz Leitungsbelastbarkeit - Bitte ziehen Sie die Aussagen auf das geeignete Feld." objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_620_193&#38;client_id=default&#38;h5p_object_id=11&#38;obj_id_lrs=646" />
+          </verDatAs:contentPage>
+        </verDatAs:chapter>
+        <verDatAs:chapter id="Chapter_0fi1xqs" name="Detaillierte Thermografie-Messung im Schaltschrank" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=st_621_193&#38;client_id=default&#38;obj_id_lrs=646">
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_622_193&#38;client_id=default&#38;obj_id_lrs=646" title="Thermografiemessung ohne Abdeckblenden" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_623_193&#38;client_id=default&#38;obj_id_lrs=646" title="Quiz: Sicherheit in Schaltschränken">
+            <verDatAs:interactiveTask id="InteractiveTask_1y5dfkx" name="Quiz: Sicherheit in Schaltschränken" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_623_193&#38;client_id=default&#38;h5p_object_id=13&#38;obj_id_lrs=646" />
+          </verDatAs:contentPage>
+        </verDatAs:chapter>
+        <verDatAs:chapter id="Chapter_032cway" name="Zusammenfassung" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=st_624_193&#38;client_id=default&#38;obj_id_lrs=646">
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_625_193&#38;client_id=default&#38;obj_id_lrs=646" title="Die Arbeitsschritte im Überblick" />
+        </verDatAs:chapter>
+      </verDatAs:module>
+      <verDatAs:module id="Module_1uvrbua" name="Praxisaufgabe Wiederholungsprüfung ortsveränderlicher Geräte nach DIN VDE 0701/0702" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=lm_185&#38;client_id=default&#38;obj_id_lrs=638">
+        <verDatAs:chapter id="Chapter_08x9ih1" name="Ausgangssituation im Betrieb" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=st_572_185&#38;client_id=default&#38;obj_id_lrs=638">
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_573_185&#38;client_id=default&#38;obj_id_lrs=638" title="Arbeitsauftrag  zur Praxisaufgabe" />
+        </verDatAs:chapter>
+        <verDatAs:chapter id="Chapter_1ujar3q" name="Prüfung von elektrischen Geräten nach DIN 0701/0702" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=st_574_185&#38;client_id=default&#38;obj_id_lrs=638">
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_575_185&#38;client_id=default&#38;obj_id_lrs=638" title="Prüfung elektrischer ortsveränderlicher Geräte" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_576_185&#38;client_id=default&#38;obj_id_lrs=638" title="Prüfung durch eine befähigte Person" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_577_185&#38;client_id=default&#38;obj_id_lrs=638" title="Prüffristen" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_578_185&#38;client_id=default&#38;obj_id_lrs=638" title="Überblick Prüfablauf" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_579_185&#38;client_id=default&#38;obj_id_lrs=638" title="Quiz Prüfablauf">
+            <verDatAs:interactiveTask id="InteractiveTask_1jx95ym" name="Quiz: Prüfablauf" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_579_185&#38;client_id=default&#38;h5p_object_id=6&#38;obj_id_lrs=638" />
+          </verDatAs:contentPage>
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_580_185&#38;client_id=default&#38;obj_id_lrs=638" title="Messgerät" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_581_185&#38;client_id=default&#38;obj_id_lrs=638" title="Schutzklassen" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_582_185&#38;client_id=default&#38;obj_id_lrs=638" title="Quiz Schutzklassen">
+            <verDatAs:interactiveTask id="InteractiveTask_05snsa3" name="Ziehen Sie die Symbole auf die richtigen Schutzklassen I, II und III." objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_582_185&#38;client_id=default&#38;h5p_object_id=7&#38;obj_id_lrs=638" />
+          </verDatAs:contentPage>
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_583_185&#38;client_id=default&#38;obj_id_lrs=638" title="Messverfahren" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_584_185&#38;client_id=default&#38;obj_id_lrs=638" title="Auswertung der Messergebnisse" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_585_185&#38;client_id=default&#38;obj_id_lrs=638" title="Funktionsprüfung" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_586_185&#38;client_id=default&#38;obj_id_lrs=638" title="Dokumentation" />
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_587_185&#38;client_id=default&#38;obj_id_lrs=638" title="Prüfprotokoll" />
+        </verDatAs:chapter>
+        <verDatAs:chapter id="Chapter_0qbm3xz" name="Durchführung der Prüfung nach DIN VDE 0701/0702" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=st_588_185&#38;client_id=default&#38;obj_id_lrs=638">
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_589_185&#38;client_id=default&#38;obj_id_lrs=638" title="Sichtprüfung Lötkolben">
+            <verDatAs:interactiveTask id="InteractiveTask_1mr2ktf" name="Interactive Video Sichtprüfung Lötkolben" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_589_185&#38;client_id=default&#38;h5p_object_id=9&#38;obj_id_lrs=638" />
+          </verDatAs:contentPage>
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_590_185&#38;client_id=default&#38;obj_id_lrs=638" title="Sichtprüfung Wasserkocher">
+            <verDatAs:interactiveTask id="InteractiveTask_0rzx806" name="Interactive Video Sichtprüfung Wasserkocher" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_590_185&#38;client_id=default&#38;h5p_object_id=10&#38;obj_id_lrs=638" />
+          </verDatAs:contentPage>
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_591_185&#38;client_id=default&#38;obj_id_lrs=638" title="Messtechnische Überprüfung Staubsauger">
+            <verDatAs:interactiveTask id="InteractiveTask_129rp2q" name="Interactive Video Messtechnische Überprüfung Staubsauger" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_591_185&#38;client_id=default&#38;h5p_object_id=5&#38;obj_id_lrs=638" />
+          </verDatAs:contentPage>
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_592_185&#38;client_id=default&#38;obj_id_lrs=638" title="Quiz Wiederholungsprüfung">
+            <verDatAs:interactiveTask id="InteractiveTask_0dh8h8n" name="Quiz Überprüfung von elektrischen Geräten nach DIN VDE 0701/0702" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_592_185&#38;client_id=default&#38;h5p_object_id=8&#38;obj_id_lrs=638" />
+          </verDatAs:contentPage>
+        </verDatAs:chapter>
+        <verDatAs:chapter id="Chapter_06apppp" name="Zusammenfassung" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=st_593_185&#38;client_id=default&#38;obj_id_lrs=638">
+          <verDatAs:contentPage objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_594_185&#38;client_id=default&#38;obj_id_lrs=638" title="Die Aufgaben der EFKffT bei der Prüfung von elektrischen Geräten nach DIN 0701/0702 im Überblick" />
+        </verDatAs:chapter>
+      </verDatAs:module>
+    </verDatAs:topic>
+    <verDatAs:sequenceFlow id="SequenceFlow_0mgmei6" sourceRef="Topic_1" targetRef="Module_05qzvez" />
+    <verDatAs:sequenceFlow id="SequenceFlow_15zi2mb" sourceRef="Module_05qzvez" targetRef="Chapter_10g0hh6" />
+    <verDatAs:sequenceFlow id="SequenceFlow_0q6ahoc" sourceRef="Chapter_0edffyh" targetRef="InteractiveTask_0p8ee9u" />
+    <verDatAs:sequenceFlow id="SequenceFlow_1bjoi00" sourceRef="Module_05qzvez" targetRef="Chapter_0edffyh" />
+    <verDatAs:sequenceFlow id="SequenceFlow_0iqyy0v" sourceRef="Chapter_1e4m01z" targetRef="InteractiveTask_1vfyx28" />
+    <verDatAs:sequenceFlow id="SequenceFlow_0m7nr00" sourceRef="Module_05qzvez" targetRef="Chapter_1e4m01z" />
+    <verDatAs:sequenceFlow id="SequenceFlow_0vcntar" sourceRef="Chapter_0fi1xqs" targetRef="InteractiveTask_1y5dfkx" />
+    <verDatAs:sequenceFlow id="SequenceFlow_10byvx1" sourceRef="Module_05qzvez" targetRef="Chapter_0fi1xqs" />
+    <verDatAs:sequenceFlow id="SequenceFlow_1aty9ua" sourceRef="Module_05qzvez" targetRef="Chapter_032cway" />
+    <verDatAs:sequenceFlow id="SequenceFlow_1r2msj2" sourceRef="Topic_1" targetRef="Module_1uvrbua" />
+    <verDatAs:sequenceFlow id="SequenceFlow_0kvngrf" sourceRef="Module_1uvrbua" targetRef="Chapter_08x9ih1" />
+    <verDatAs:sequenceFlow id="SequenceFlow_0i54roc" sourceRef="Chapter_1ujar3q" targetRef="InteractiveTask_1jx95ym" />
+    <verDatAs:sequenceFlow id="SequenceFlow_1njgqxj" sourceRef="Chapter_1ujar3q" targetRef="InteractiveTask_05snsa3" />
+    <verDatAs:sequenceFlow id="SequenceFlow_0xl29vg" sourceRef="Module_1uvrbua" targetRef="Chapter_1ujar3q" />
+    <verDatAs:sequenceFlow id="SequenceFlow_0s44rs8" sourceRef="Chapter_0qbm3xz" targetRef="InteractiveTask_1mr2ktf" />
+    <verDatAs:sequenceFlow id="SequenceFlow_00aezva" sourceRef="Chapter_0qbm3xz" targetRef="InteractiveTask_0rzx806" />
+    <verDatAs:sequenceFlow id="SequenceFlow_1dayy1l" sourceRef="Chapter_0qbm3xz" targetRef="InteractiveTask_129rp2q" />
+    <verDatAs:sequenceFlow id="SequenceFlow_0l025rq" sourceRef="Chapter_0qbm3xz" targetRef="InteractiveTask_0dh8h8n" />
+    <verDatAs:sequenceFlow id="SequenceFlow_09p15y7" sourceRef="Module_1uvrbua" targetRef="Chapter_0qbm3xz" />
+    <verDatAs:sequenceFlow id="SequenceFlow_1g0615w" sourceRef="Module_1uvrbua" targetRef="Chapter_06apppp" />
+    <verDatAs:learningPath title="Lernpfad EFkffT">
+      <!-- Module three -->
+      <verDatAs:learningPathElement id="ArbeitsauftragzurPraxisaufgabe_001" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_573_185&#38;client_id=default&#38;obj_id_lrs=638" step="1" preferred="True"/>
+      <!-- First part -->
+      <!-- Preferred path -->
+      <verDatAs:learningPathElement id="QuizPruefablauf_002" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_579_185&#38;client_id=default&#38;obj_id_lrs=638" step="2" preferred="True"/>
+      <verDatAs:learningPathElement id="PruefungGeraete_003" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_575_185&#38;client_id=default&#38;obj_id_lrs=638" step="3" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizPruefablauf_002"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="PruefungdurcheinebefaehigtePerson_004" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_576_185&#38;client_id=default&#38;obj_id_lrs=638" step="4" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizPruefablauf_002"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="Prueffristen_005" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_577_185&#38;client_id=default&#38;obj_id_lrs=638" step="5" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizPruefablauf_002"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="UeberblickPruefablauf_006" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_578_185&#38;client_id=default&#38;obj_id_lrs=638" step="6" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizPruefablauf_002"/>
+      </verDatAs:learningPathElement>
+      <!-- Normal path -->
+      <verDatAs:learningPathElement id="PruefungGeraete_007" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_575_185&#38;client_id=default&#38;obj_id_lrs=638" step="2" preferred="False"/>
+      <verDatAs:learningPathElement id="PruefungdurcheinebefaehigtePerson_008" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_576_185&#38;client_id=default&#38;obj_id_lrs=638" step="3" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizPruefablauf_002"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="Prueffristen_009" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_577_185&#38;client_id=default&#38;obj_id_lrs=638" step="4" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizPruefablauf_002"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="UeberblickPruefablauf_010" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_578_185&#38;client_id=default&#38;obj_id_lrs=638" step="5" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizPruefablauf_002"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="QuizPruefablauf_011" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_579_185&#38;client_id=default&#38;obj_id_lrs=638" step="6" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizPruefablauf_002"/>
+      </verDatAs:learningPathElement>
+      <!-- Second part -->
+      <!-- Preferred path -->
+      <verDatAs:learningPathElement id="QuizSchutzklassen_012" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_582_185&#38;client_id=default&#38;obj_id_lrs=638" step="7" preferred="True"/>
+      <verDatAs:learningPathElement id="Messgeraet_013" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_580_185&#38;client_id=default&#38;obj_id_lrs=638" step="8" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizSchutzklassen_012"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="Schutzklassen_014" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_581_185&#38;client_id=default&#38;obj_id_lrs=638" step="9" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizSchutzklassen_012"/>
+      </verDatAs:learningPathElement>
+      <!-- Normal path -->
+      <verDatAs:learningPathElement id="Messgeraet_015" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_580_185&#38;client_id=default&#38;obj_id_lrs=638" step="7" preferred="False"/>
+      <verDatAs:learningPathElement id="Schutzklassen_016" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_581_185&#38;client_id=default&#38;obj_id_lrs=638" step="8" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizSchutzklassen_012"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="QuizSchutzklassen_017" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_582_185&#38;client_id=default&#38;obj_id_lrs=638" step="9" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizSchutzklassen_012"/>
+      </verDatAs:learningPathElement>
+      <!-- Third part -->
+      <verDatAs:learningPathElement id="Messverfahren_018" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_583_185&#38;client_id=default&#38;obj_id_lrs=638" step="10" preferred="True"/>
+      <verDatAs:learningPathElement id="AuswertungderMessergebnisse_019" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_584_185&#38;client_id=default&#38;obj_id_lrs=638" step="11" preferred="True"/>
+      <verDatAs:learningPathElement id="Funktionspruefung_020" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_585_185&#38;client_id=default&#38;obj_id_lrs=638" step="12" preferred="True"/>
+      <verDatAs:learningPathElement id="Dokumentation_021" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_586_185&#38;client_id=default&#38;obj_id_lrs=638" step="13" preferred="True"/>
+      <verDatAs:learningPathElement id="Pruefprotokoll_022" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_587_185&#38;client_id=default&#38;obj_id_lrs=638" step="14" preferred="True"/>
+      <verDatAs:learningPathElement id="SichtpruefungLoetkolben_023" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_589_185&#38;client_id=default&#38;obj_id_lrs=638" step="15" preferred="True"/>
+      <verDatAs:learningPathElement id="SichtpruefungWasserkocher_024" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_590_185&#38;client_id=default&#38;obj_id_lrs=638" step="16" preferred="True"/>
+      <verDatAs:learningPathElement id="MesstechnischeUeberprüfung_025" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_591_185&#38;client_id=default&#38;obj_id_lrs=638" step="17" preferred="True"/>
+      <verDatAs:learningPathElement id="QuizWiederholungspruefung_026" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_592_185&#38;client_id=default&#38;obj_id_lrs=638" step="18" preferred="True"/>
+      <verDatAs:learningPathElement id="Aufgaben_027" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_594_185&#38;client_id=default&#38;obj_id_lrs=638" step="19" preferred="True"/>
+      <!-- Module four -->
+      <verDatAs:learningPathElement id="ArbeitsauftragzurPraxisaufgabe_028" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_612_193&#38;client_id=default&#38;obj_id_lrs=646" step="20" preferred="True"/>
+      <!-- First part -->
+      <!-- Preferred path -->
+      <verDatAs:learningPathElement id="QuizMessgeraetederThermografie_029" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_616_193&#38;client_id=default&#38;obj_id_lrs=646" step="21" preferred="True"/>
+      <verDatAs:learningPathElement id="ThermografieinderElektrotechnik_030" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_614_193&#38;client_id=default&#38;obj_id_lrs=646" step="22" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizMessgeraetederThermografie_029"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="MessgeraetederThermografie_031" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_615_193&#38;client_id=default&#38;obj_id_lrs=646" step="23" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizMessgeraetederThermografie_029"/>
+      </verDatAs:learningPathElement>
+      <!-- Normal path -->
+      <verDatAs:learningPathElement id="ThermografieinderElektrotechnik_032" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_614_193&#38;client_id=default&#38;obj_id_lrs=646" step="21" preferred="False"/>
+      <verDatAs:learningPathElement id="MessgeraetederThermografie_033" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_615_193&#38;client_id=default&#38;obj_id_lrs=646" step="22" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizMessgeraetederThermografie_029"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="QuizMessgeraetederThermografie_034" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_616_193&#38;client_id=default&#38;obj_id_lrs=646" step="23" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizMessgeraetederThermografie_029"/>
+      </verDatAs:learningPathElement>
+      <!-- Second part -->
+      <!-- Preferred path -->
+      <verDatAs:learningPathElement id="QuizLeistungsbelastbarkeit_035" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_620_193&#38;client_id=default&#38;obj_id_lrs=646" step="24" preferred="True"/>
+      <verDatAs:learningPathElement id="WerkzeugfuerArbeitsaufgabe_036" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_618_193&#38;client_id=default&#38;obj_id_lrs=646" step="25" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizLeistungsbelastbarkeit_035"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="Thermografiemessung_037" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_619_193&#38;client_id=default&#38;obj_id_lrs=646" step="26" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizLeistungsbelastbarkeit_035"/>
+      </verDatAs:learningPathElement>
+      <!-- Normal path -->
+      <verDatAs:learningPathElement id="WerkzeugfuerArbeitsaufgabe_038" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_618_193&#38;client_id=default&#38;obj_id_lrs=646" step="24" preferred="False"/>
+      <verDatAs:learningPathElement id="Thermografiemessung_039" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_619_193&#38;client_id=default&#38;obj_id_lrs=646" step="25" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizLeistungsbelastbarkeit_035"/>
+      </verDatAs:learningPathElement>
+      <verDatAs:learningPathElement id="QuizLeistungsbelastbarkeit_040" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_620_193&#38;client_id=default&#38;obj_id_lrs=646" step="26" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizLeistungsbelastbarkeit_035"/>
+      </verDatAs:learningPathElement>
+      <!-- Third part -->
+      <!-- Preferred path -->
+      <verDatAs:learningPathElement id="QuizSicherheitinSchaltschraenken_041" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_623_193&#38;client_id=default&#38;obj_id_lrs=646" step="27" preferred="True"/>
+      <verDatAs:learningPathElement id="ThermografiemessungohneAbdeckblenden_042" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_622_193&#38;client_id=default&#38;obj_id_lrs=646" step="28" preferred="True">
+        <verDatAs:learningPathElementProcessedRequirement id="QuizSicherheitinSchaltschraenken_041"/>
+      </verDatAs:learningPathElement>
+      <!-- Normal path -->
+      <verDatAs:learningPathElement id="ThermografiemessungohneAbdeckblenden_043" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_622_193&#38;client_id=default&#38;obj_id_lrs=646" step="27" preferred="False"/>
+      <verDatAs:learningPathElement id="QuizSicherheitinSchaltschraenken_044" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_623_193&#38;client_id=default&#38;obj_id_lrs=646" step="28" preferred="False">
+        <verDatAs:learningPathElementNotProcessedRequirement id="QuizSicherheitinSchaltschraenken_041"/>
+      </verDatAs:learningPathElement>
+      <!-- Fourth part -->
+      <verDatAs:learningPathElement id="ArbeitsschritteimUeberblick_045" objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=pg_625_193&#38;client_id=default&#38;obj_id_lrs=646" step="29" preferred="True"/>
+    </verDatAs:learningPath>
+    <verDatAs:test objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=tst_217&#38;client_id=default&#38;obj_id_lrs=670" title="Abschlusstest Elektrofachkraft für festgelegte Tätigkeiten" />
+    <verDatAs:test objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=tst_219&#38;client_id=default&#38;obj_id_lrs=672" title="Quiz Arbeitsschutz und Arbeitssicherheit" />
+    <verDatAs:test objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=tst_184&#38;client_id=default&#38;obj_id_lrs=637" title="Quiz Die Elektrofachkraft für festgelegte Tätigkeiten" />
+    <verDatAs:test objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=tst_216&#38;client_id=default&#38;obj_id_lrs=669" title="Quiz: Austausch Leuchtstoffröhren gegen LED-Röhren" />
+    <verDatAs:test objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=tst_215&#38;client_id=default&#38;obj_id_lrs=668" title="Quiz: Austausch eines Drehstrommotors" />
+    <verDatAs:test objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=tst_211&#38;client_id=default&#38;obj_id_lrs=664" title="Quiz: FI Nachrüstung in einem Wohngebäude-Unterverteiler (einphasig)" />
+    <verDatAs:test objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=tst_179&#38;client_id=default&#38;obj_id_lrs=632" title="Quiz: Prüfung von elektrischen Geräten nach DIN VDE 0701/0702" />
+    <verDatAs:test objectId="http://showcase.verdatas.inf.tu-dresden.de:8091/goto.php?target=tst_198&#38;client_id=default&#38;obj_id_lrs=651" title="Quiz: Thermografische Untersuchung eines Schaltschranks" />
+  </verDatAs:knowledgeGraph>
+  <verDatAsDi:knowledgeGraphRoot id="RootGraph_1">
+    <verDatAsDi:graphPlane id="GraphPlane_1" graphElement="Graph_1">
+      <verDatAsDi:graphShape id="Topic_1_di" graphElement="Topic_1">
+        <dc:Bounds x="237" y="90" width="80" height="90" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="253" y="187" width="49" height="80" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Chapter_032cway_di" graphElement="Chapter_032cway">
+        <dc:Bounds x="247" y="446.6666666666667" width="46" height="41" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="246" y="488" width="49" height="27" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Chapter_06apppp_di" graphElement="Chapter_06apppp">
+        <dc:Bounds x="531" y="446.6666666666667" width="46" height="41" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="530" y="488" width="49" height="27" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Chapter_08x9ih1_di" graphElement="Chapter_08x9ih1">
+        <dc:Bounds x="363" y="446.6666666666667" width="46" height="41" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="361" y="488" width="50" height="40" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Chapter_0edffyh_di" graphElement="Chapter_0edffyh">
+        <dc:Bounds x="79" y="446.6666666666667" width="46" height="41" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="80" y="488" width="45" height="80" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Chapter_0fi1xqs_di" graphElement="Chapter_0fi1xqs">
+        <dc:Bounds x="191" y="446.6666666666667" width="46" height="41" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="191" y="488" width="48" height="106" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Chapter_0qbm3xz_di" graphElement="Chapter_0qbm3xz">
+        <dc:Bounds x="475" y="446.6666666666667" width="46" height="41" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="476" y="488" width="46" height="93" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Chapter_10g0hh6_di" graphElement="Chapter_10g0hh6">
+        <dc:Bounds x="23" y="446.6666666666667" width="46" height="41" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="21" y="488" width="50" height="40" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Chapter_1e4m01z_di" graphElement="Chapter_1e4m01z">
+        <dc:Bounds x="135" y="446.6666666666667" width="46" height="41" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="135" y="488" width="48" height="93" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Chapter_1ujar3q_di" graphElement="Chapter_1ujar3q">
+        <dc:Bounds x="419" y="446.6666666666667" width="46" height="41" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="419" y="488" width="46" height="106" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="InteractiveTask_05snsa3_di" graphElement="InteractiveTask_05snsa3">
+        <dc:Bounds x="429" y="636.6666666666667" width="38" height="40" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="429" y="677" width="38" height="146" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="InteractiveTask_0dh8h8n_di" graphElement="InteractiveTask_0dh8h8n">
+        <dc:Bounds x="485" y="774.6666666666667" width="38" height="40" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="487" y="815" width="34" height="159" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="InteractiveTask_0p8ee9u_di" graphElement="InteractiveTask_0p8ee9u">
+        <dc:Bounds x="89" y="567.6666666666667" width="38" height="40" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="91" y="608" width="35" height="93" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="InteractiveTask_0rzx806_di" graphElement="InteractiveTask_0rzx806">
+        <dc:Bounds x="485" y="636.6666666666667" width="38" height="40" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="485" y="677" width="38" height="93" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="InteractiveTask_129rp2q_di" graphElement="InteractiveTask_129rp2q">
+        <dc:Bounds x="485" y="705.6666666666667" width="38" height="40" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="486" y="746" width="36" height="132" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="InteractiveTask_1jx95ym_di" graphElement="InteractiveTask_1jx95ym">
+        <dc:Bounds x="429" y="567.6666666666667" width="38" height="40" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="431" y="608" width="35" height="40" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="InteractiveTask_1mr2ktf_di" graphElement="InteractiveTask_1mr2ktf">
+        <dc:Bounds x="485" y="567.6666666666667" width="38" height="40" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="487" y="608" width="34" height="93" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="InteractiveTask_1vfyx28_di" graphElement="InteractiveTask_1vfyx28">
+        <dc:Bounds x="145" y="567.6666666666667" width="38" height="40" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="146" y="608" width="37" height="172" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="InteractiveTask_1y5dfkx_di" graphElement="InteractiveTask_1y5dfkx">
+        <dc:Bounds x="201" y="567.6666666666667" width="38" height="40" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="201" y="608" width="38" height="80" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Module_05qzvez_di" graphElement="Module_05qzvez">
+        <dc:Bounds x="135" y="286.6666666666667" width="60" height="70" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="141" y="357" width="48" height="119" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphShape id="Module_1uvrbua_di" graphElement="Module_1uvrbua">
+        <dc:Bounds x="447" y="286.6666666666667" width="60" height="70" />
+        <verDatAsDi:graphLabel>
+          <dc:Bounds x="453" y="357" width="48" height="159" />
+        </verDatAsDi:graphLabel>
+      </verDatAsDi:graphShape>
+      <verDatAsDi:graphEdge id="SequenceFlow_00aezva_di" graphElement="SequenceFlow_00aezva">
+        <verDatAsDi:waypoint x="498" y="488" />
+        <verDatAsDi:waypoint x="498" y="637" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_09p15y7_di" graphElement="SequenceFlow_09p15y7">
+        <verDatAsDi:waypoint x="477" y="357" />
+        <verDatAsDi:waypoint x="477" y="447" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0i54roc_di" graphElement="SequenceFlow_0i54roc">
+        <verDatAsDi:waypoint x="442" y="488" />
+        <verDatAsDi:waypoint x="442" y="568" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0iqyy0v_di" graphElement="SequenceFlow_0iqyy0v">
+        <verDatAsDi:waypoint x="158" y="488" />
+        <verDatAsDi:waypoint x="158" y="568" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0kvngrf_di" graphElement="SequenceFlow_0kvngrf">
+        <verDatAsDi:waypoint x="477" y="357" />
+        <verDatAsDi:waypoint x="477" y="402" />
+        <verDatAsDi:waypoint x="386" y="402" />
+        <verDatAsDi:waypoint x="386" y="447" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0l025rq_di" graphElement="SequenceFlow_0l025rq">
+        <verDatAsDi:waypoint x="498" y="488" />
+        <verDatAsDi:waypoint x="498" y="775" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0m7nr00_di" graphElement="SequenceFlow_0m7nr00">
+        <verDatAsDi:waypoint x="165" y="357" />
+        <verDatAsDi:waypoint x="165" y="447" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0mgmei6_di" graphElement="SequenceFlow_0mgmei6">
+        <verDatAsDi:waypoint x="277" y="180" />
+        <verDatAsDi:waypoint x="277" y="233" />
+        <verDatAsDi:waypoint x="165" y="233" />
+        <verDatAsDi:waypoint x="165" y="287" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0q6ahoc_di" graphElement="SequenceFlow_0q6ahoc">
+        <verDatAsDi:waypoint x="102" y="488" />
+        <verDatAsDi:waypoint x="102" y="568" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0s44rs8_di" graphElement="SequenceFlow_0s44rs8">
+        <verDatAsDi:waypoint x="498" y="488" />
+        <verDatAsDi:waypoint x="498" y="568" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0vcntar_di" graphElement="SequenceFlow_0vcntar">
+        <verDatAsDi:waypoint x="214" y="488" />
+        <verDatAsDi:waypoint x="214" y="568" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_0xl29vg_di" graphElement="SequenceFlow_0xl29vg">
+        <verDatAsDi:waypoint x="477" y="357" />
+        <verDatAsDi:waypoint x="477" y="402" />
+        <verDatAsDi:waypoint x="442" y="402" />
+        <verDatAsDi:waypoint x="442" y="447" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_10byvx1_di" graphElement="SequenceFlow_10byvx1">
+        <verDatAsDi:waypoint x="165" y="357" />
+        <verDatAsDi:waypoint x="165" y="402" />
+        <verDatAsDi:waypoint x="214" y="402" />
+        <verDatAsDi:waypoint x="214" y="447" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_15zi2mb_di" graphElement="SequenceFlow_15zi2mb">
+        <verDatAsDi:waypoint x="165" y="357" />
+        <verDatAsDi:waypoint x="165" y="402" />
+        <verDatAsDi:waypoint x="46" y="402" />
+        <verDatAsDi:waypoint x="46" y="447" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_1aty9ua_di" graphElement="SequenceFlow_1aty9ua">
+        <verDatAsDi:waypoint x="165" y="357" />
+        <verDatAsDi:waypoint x="165" y="402" />
+        <verDatAsDi:waypoint x="270" y="402" />
+        <verDatAsDi:waypoint x="270" y="447" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_1bjoi00_di" graphElement="SequenceFlow_1bjoi00">
+        <verDatAsDi:waypoint x="165" y="357" />
+        <verDatAsDi:waypoint x="165" y="402" />
+        <verDatAsDi:waypoint x="102" y="402" />
+        <verDatAsDi:waypoint x="102" y="447" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_1dayy1l_di" graphElement="SequenceFlow_1dayy1l">
+        <verDatAsDi:waypoint x="498" y="488" />
+        <verDatAsDi:waypoint x="498" y="706" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_1g0615w_di" graphElement="SequenceFlow_1g0615w">
+        <verDatAsDi:waypoint x="477" y="357" />
+        <verDatAsDi:waypoint x="477" y="402" />
+        <verDatAsDi:waypoint x="554" y="402" />
+        <verDatAsDi:waypoint x="554" y="447" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_1njgqxj_di" graphElement="SequenceFlow_1njgqxj">
+        <verDatAsDi:waypoint x="442" y="488" />
+        <verDatAsDi:waypoint x="442" y="637" />
+      </verDatAsDi:graphEdge>
+      <verDatAsDi:graphEdge id="SequenceFlow_1r2msj2_di" graphElement="SequenceFlow_1r2msj2">
+        <verDatAsDi:waypoint x="277" y="180" />
+        <verDatAsDi:waypoint x="277" y="233" />
+        <verDatAsDi:waypoint x="477" y="233" />
+        <verDatAsDi:waypoint x="477" y="287" />
+      </verDatAsDi:graphEdge>
+    </verDatAsDi:graphPlane>
+  </verDatAsDi:knowledgeGraphRoot>
+</verDatAs:definitions>
