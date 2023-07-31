@@ -19,7 +19,9 @@ export class KnowledgeGraphParser {
     }
 
     extractTopicObjects(topicRoot = null, type = "verDatAs:topic") {
-        let topicObjects = [];
+        let topicObject = null
+        let childObjects = [];
+        //let childObjects = [];
         if (topicRoot == null) {
             topicRoot = this.knowledgeGraph["verDatAs:definitions"]["verDatAs:knowledgeGraph"]["verDatAs:topic"];
         }
@@ -27,24 +29,40 @@ export class KnowledgeGraphParser {
             //console.log(item);
             if (topicRoot[item].length) {
                 for (const subItem in topicRoot[item]) {
-                    console.log("SubItem:", subItem);
+                    //console.log("SubItem:", subItem);
                     const newTopicObjects = this.extractTopicObjects(topicRoot[item][subItem], item)
-                    topicObjects = newTopicObjects.concat(topicObjects)
+                    childObjects.push(newTopicObjects);
+                }
+            } else if (item === "@_") {
+                let subRoot = topicRoot[item];
+                if (subRoot["@_"]) {
+                    subRoot = subRoot["@_"];
+                }
+                if (item !== "@_") {
+                    //type = item;
+                }
+                //console.log("Item", type, subRoot)
+                subRoot["type"] = type.replace("verDatAs:", "");
+                if (topicObject === null) {
+                    topicObject = this.transformObject(subRoot);
+                } else {
+                    console.log("More than one topicobject found!")
                 }
             } else {
                 let subRoot = topicRoot[item];
                 if (subRoot["@_"]) {
                     subRoot = subRoot["@_"];
                 }
-                if (item !== "@_") {
-                    type = item;
-                }
-                console.log("Item", type, subRoot)
-                subRoot["type"] = type.replace("verDatAs:", "");
-                topicObjects.push(this.transformObject(subRoot));
+                //console.log("Item", type, subRoot)
+                subRoot["type"] = item.replace("verDatAs:", "");
+                childObjects.push(this.transformObject(subRoot));
             }
         }
-        return topicObjects;
+        if (childObjects.length > 0) {
+            topicObject["childObjects"] = childObjects;
+        }
+        //console.log(topicObject)
+        return topicObject;
     }
 
     transformObject(object) {

@@ -12,11 +12,13 @@ import { KnowledgeGraphEditor } from './knowledgeGraphEditor';
 import { Component } from 'preact';
 import { KnowledgeGraphParser } from "./knowledgeGraphParser";
 import { KnowledgeGraphObject } from "./knowledgeGraphObject";
+import { KnowledgeGraphTree } from "./knowledgeGraphTree";
+import { ButtonGroup } from "react-bootstrap";
 
 export class App extends Component {
   constructor() {
     super();
-    this.state = { knowledgeGraph: [] };
+    this.state = { knowledgeGraph: [], collapsed: false };
     this.pendingUploadGraph = [];
     this.knowledgeGraph = [];
     this.initKnowledgeGraph = [];
@@ -57,6 +59,10 @@ export class App extends Component {
 
   onChange = (newKnowledgeGraph) => {
     this.knowledgeGraph = newKnowledgeGraph;
+  }
+
+  toggleCollapse = () => {
+    this.setState({ collapsed: !this.state.collapsed });
   }
 
   exportJson = () => {
@@ -132,25 +138,14 @@ export class App extends Component {
           </Col>
         </Row>
         <Row>
-          <Col lg={4} >
+          <Col lg={6} >
             <h2>Knowledge Graph Objects</h2>
-            <ListGroup>
-              <ReactSortable
-                // here they are!
-                list={this.initialList}
-                setList={() => { }}
-                group="knowledgePathEditor"
-                animation={200}
-                delayOnTouchStart={true}
-                delay={2}
-              >
-                {this.initialList.map((item) => (
-                  <KnowledgeGraphObject item={item} />
-                ))}
-              </ReactSortable>
-            </ListGroup>
+            <ButtonGroup>
+              <Button onClick={this.toggleCollapse} variant="primary">{this.state.collapsed ? 'Show' : 'Collapse'} all</Button>
+            </ButtonGroup>
+            <KnowledgeGraphTree collapsed={this.state.collapsed} knowledgeGraphTree={this.initialList}/>
           </Col>
-          <Col lg={8}>
+          <Col lg={6}>
             <h2>Learning Path</h2>
             <KnowledgeGraphEditor knowledgeGraph={this.initKnowledgeGraph} onChange={this.onChange} />
           </Col>
