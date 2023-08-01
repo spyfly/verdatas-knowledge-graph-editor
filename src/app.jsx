@@ -63,6 +63,7 @@ export class App extends Component {
 
   toggleCollapse = () => {
     this.setState({ collapsed: !this.state.collapsed });
+    this.updateCollapsed(null, null, !this.state.collapsed);
   }
 
   exportJson = () => {
@@ -118,6 +119,40 @@ export class App extends Component {
     this.forceUpdate();
   }
 
+  updateCollapsed = (objectId, knowledgeGraphTree = null, force = null) => {
+    console.log("updateCollapsed", objectId);
+    let rootElement = false;
+    if (knowledgeGraphTree == null) {
+      knowledgeGraphTree = this.initialList;
+      rootElement = true;
+    }
+
+    if (knowledgeGraphTree.objectId === objectId) {
+      const oldCollapsed = knowledgeGraphTree.collapsed ?? false;
+      console.log("oldCollapsed", oldCollapsed)
+      knowledgeGraphTree.collapsed = !oldCollapsed;
+    }
+
+    if (force !== null) {
+      knowledgeGraphTree.collapsed = force;
+    }
+
+    if (knowledgeGraphTree.childObjects) {
+      let children = []
+      for (const childObject of knowledgeGraphTree.childObjects) {
+        const child = this.updateCollapsed(objectId, childObject, force);
+        children.push(child);
+      }
+      knowledgeGraphTree.childObjects = children;
+    }
+
+    if (rootElement) {
+      this.initialList = knowledgeGraphTree;
+      this.forceUpdate();
+    }
+    return knowledgeGraphTree;
+  }
+
   render () {return (
     <>
       <Container>
@@ -143,7 +178,7 @@ export class App extends Component {
             <ButtonGroup>
               <Button onClick={this.toggleCollapse} variant="primary">{this.state.collapsed ? 'Show' : 'Collapse'} all</Button>
             </ButtonGroup>
-            <KnowledgeGraphTree collapsed={this.state.collapsed} knowledgeGraphTree={this.initialList}/>
+            <KnowledgeGraphTree knowledgeGraphTree={this.initialList} updateCollapsed={this.updateCollapsed}/>
           </Col>
           <Col lg={6}>
             <h2>Learning Path</h2>
