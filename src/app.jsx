@@ -13,7 +13,7 @@ import { Component } from 'preact';
 import { KnowledgeGraphParser } from "./knowledgeGraphParser";
 import { KnowledgeGraphObject } from "./knowledgeGraphObject";
 import { KnowledgeGraphTree } from "./knowledgeGraphTree";
-import { ButtonGroup } from "react-bootstrap";
+import { ButtonGroup, FormText } from "react-bootstrap";
 
 export class App extends Component {
   constructor() {
@@ -22,35 +22,16 @@ export class App extends Component {
     this.pendingUploadGraph = [];
     this.knowledgeGraph = [];
     this.initKnowledgeGraph = [];
-
-    this.initialList = [{
-      title: "Test1",
-      objectId: "test1"
-    },
-    {
-      title: "Test2",
-      objectId: "test2"
-    },
-    {
-      title: "Test3",
-      objectId: "test3"
-    },
-    {
-      title: "Test4",
-      objectId: "test4"
-    },
-    {
-      title: "Test5",
-      objectId: "test5"
-    }];
-
-    this.initItemList();
+    this.initialList = [];
+    //this.initItemList();
   }
 
-  async initItemList() {
-    const knowledgeGraphXmlReq = await fetch('./raw-knowledge-graph.xml');
-    const knowledgeGraphXml = await knowledgeGraphXmlReq.text();
-    const kgParser = new KnowledgeGraphParser(knowledgeGraphXml);
+  async initItemList(rawXml = null) {
+    /*if (rawXml == null) {
+      const knowledgeGraphXmlReq = await fetch('./raw-knowledge-graph.xml');
+      rawXml = await knowledgeGraphXmlReq.text();
+    }*/
+    const kgParser = new KnowledgeGraphParser(rawXml);
     const topicObjects = kgParser.extractTopicObjects();
     console.log(topicObjects)
     this.initialList = topicObjects;
@@ -107,6 +88,7 @@ export class App extends Component {
         console.log(jsonData);
       } catch (error) {
         console.error('Error parsing JSON file:', error);
+        self.initItemList(readerEvent.target.result);
       }
     };
 
@@ -153,6 +135,42 @@ export class App extends Component {
     return knowledgeGraphTree;
   }
 
+  search = (searchString, knowledgeGraphTree = null) => {
+    console.log("search", searchString);
+    let rootElement = false;
+    if (knowledgeGraphTree == null) {
+      knowledgeGraphTree = this.initialList;
+      rootElement = true;
+    }
+
+    const searchTarget = knowledgeGraphTree.type + ' : ' + (knowledgeGraphTree.title ?? knowledgeGraphTree.name);
+    knowledgeGraphTree.collapsed = true;
+    knowledgeGraphTree.show = false;
+    if (searchTarget.includes(searchString)) {
+      knowledgeGraphTree.collapsed = false;
+      knowledgeGraphTree.show = true;
+    }
+
+
+    if (knowledgeGraphTree.childObjects) {
+      let children = []
+      for (const childObject of knowledgeGraphTree.childObjects) {
+        const child = this.search(searchString, childObject);
+        children.push(child);
+        if (!child.collapsed) {
+          knowledgeGraphTree.collapsed = false;
+        }
+      }
+      knowledgeGraphTree.childObjects = children;
+    }
+
+    if (rootElement) {
+      this.initialList = knowledgeGraphTree;
+      this.forceUpdate();
+    }
+    return knowledgeGraphTree;
+  }
+
   render () {return (
     <>
       <Container>
@@ -164,8 +182,8 @@ export class App extends Component {
         <Row className="pb-3">
           <Col>
             <InputGroup class controlId="formFile">
-              <Form.Control onChange={this.uploadJson} title="Import JSON" type="file" />
-              <Button onClick={this.importJson}>Import JSON</Button>
+              <Form.Control onChange={this.uploadJson} title="Import JSON/XML" type="file" />
+              <Button onClick={this.importJson}>Import JSON/XML</Button>
             </InputGroup>
           </Col>
           <Col>
@@ -175,10 +193,13 @@ export class App extends Component {
         <Row>
           <Col lg={6} >
             <h2>Knowledge Graph Objects</h2>
-            <ButtonGroup>
+            <InputGroup>
               <Button onClick={this.toggleCollapse} variant="primary">{this.state.collapsed ? 'Show' : 'Collapse'} all</Button>
-            </ButtonGroup>
+              <Form.Control onChange={(input) => this.search(input.target.value)} placeholder="Search by type or name ..."></Form.Control>
+            </InputGroup>
+            <div className="overflow-scroll" style={{maxHeight: '75vh'}}>
             <KnowledgeGraphTree knowledgeGraphTree={this.initialList} updateCollapsed={this.updateCollapsed}/>
+            </div>
           </Col>
           <Col lg={6}>
             <h2>Learning Path</h2>

@@ -7,7 +7,8 @@ import { ReactSortable } from "react-sortablejs";
 
 export function KnowledgeGraphTree(props) {
     const knowledgeGraphTree = props.knowledgeGraphTree;
-    let collapsed = knowledgeGraphTree.collapsed ?? false;
+    const collapsed = knowledgeGraphTree.collapsed ?? false;
+    const show = knowledgeGraphTree.show ?? true;
     console.log("Collapsed",collapsed);
     console.log(knowledgeGraphTree.childObjects)
     return knowledgeGraphTree.childObjects ? <Accordion activeKey={collapsed ? [] : [knowledgeGraphTree.objectId]} className="border" flush>
@@ -21,7 +22,7 @@ export function KnowledgeGraphTree(props) {
             delayOnTouchStart={true}
             delay={2}
         >
-                <AccordionHeader onClick={() => props.updateCollapsed(knowledgeGraphTree.objectId)}>
+                <AccordionHeader className={show ? null : 'd-none'} onClick={() => props.updateCollapsed(knowledgeGraphTree.objectId)}>
                     <KnowledgeGraphObject item={knowledgeGraphTree} />
                 </AccordionHeader>
                 </ReactSortable>
@@ -30,7 +31,7 @@ export function KnowledgeGraphTree(props) {
                     {knowledgeGraphTree.childObjects && knowledgeGraphTree.childObjects.map((item) => <KnowledgeGraphTree updateCollapsed={props.updateCollapsed} knowledgeGraphTree={item}/>)}
                 </Accordion.Body>
             </Accordion.Item>
-    </Accordion> : <ListGroup>
+    </Accordion> : <ListGroup className={show ? null : 'd-none'}>
         <ReactSortable
         // here they are!
         list={[knowledgeGraphTree]}
