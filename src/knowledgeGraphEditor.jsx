@@ -44,14 +44,15 @@ export class KnowledgeGraphEditor extends Component {
       return 0;
     } else {
       countIds.sort();
-      console.log("Count IDs", countIds)
+      console.log("countIds", countIds)
+      // Find a gap in the countIds array
       for (var i = 0; i < countIds.length; i++) {
-        if (countIds[i] + 1 === countIds[i + 1]) {
-          continue;
-        } else {
-          return countIds[i];
+        if (countIds[i] != i + 1) {
+          return i;
         }
       }
+      // If no gap is found, return the next number
+      return countIds.length;
     }
   }
 
