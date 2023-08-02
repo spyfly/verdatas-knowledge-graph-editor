@@ -198,7 +198,14 @@ export class App extends Component {
               <Form.Control onChange={(input) => this.search(input.target.value)} placeholder="Search by type or name ..."></Form.Control>
             </InputGroup>
             <div className="overflow-scroll" style={{maxHeight: '75vh'}}>
-            <KnowledgeGraphTree knowledgeGraphTree={this.initialList} updateCollapsed={this.updateCollapsed}/>
+            {this.initialList.length === 0 ? 
+            <div className="p-3 mt-3 bg-danger bg-opacity-50">
+            <h5>Please upload the knowledgeGraph XML File first</h5> 
+            <p>The knowledge graph elements will appear here.</p>
+            <p>Use the file picker above to select the knowledgeGraph XML file!</p>
+            </div>
+            : 
+            <KnowledgeGraphTree knowledgeGraphTree={this.initialList} updateCollapsed={this.updateCollapsed}/>}
             </div>
           </Col>
           <Col lg={6}>

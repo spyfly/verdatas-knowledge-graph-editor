@@ -136,6 +136,14 @@ export class KnowledgeGraphEditor extends Component {
         delayOnTouchStart={true}
         delay={2}
       >
+        {knowledgeGraph.length == 0 && <div className="p-3 mt-3 bg-success bg-opacity-50">
+            <h5>Drag the learning path elements here</h5> 
+            <p>Drag and drop the learning path elements from the knowledge graph onto the right side.</p>
+            <h6>Import</h6>
+            <p>You can also import an existing learning path via the file picker above!</p>
+            <h6>Export</h6>
+            <p>When you are done editing the learning path, use the export button to save your learning path JSON!</p>
+            </div>}
         {knowledgeGraph.map((item) => (
           <KnowledgeGraphObject item={item}>
             <Row>
