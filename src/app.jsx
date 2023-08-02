@@ -14,11 +14,12 @@ import { KnowledgeGraphParser } from "./knowledgeGraphParser";
 import { KnowledgeGraphObject } from "./knowledgeGraphObject";
 import { KnowledgeGraphTree } from "./knowledgeGraphTree";
 import { ButtonGroup, FormText } from "react-bootstrap";
+import { KnowledgeGraphRequirements } from "./knowledgeGraphRequirements";
 
 export class App extends Component {
   constructor() {
     super();
-    this.state = { knowledgeGraph: [], collapsed: false };
+    this.state = { knowledgeGraph: [], collapsed: false, requirementsList: [] };
     this.pendingUploadGraph = [];
     this.knowledgeGraph = [];
     this.initKnowledgeGraph = [];
@@ -39,7 +40,25 @@ export class App extends Component {
   }
 
   onChange = (newKnowledgeGraph) => {
-    this.knowledgeGraph = newKnowledgeGraph;
+    if (newKnowledgeGraph != this.knowledgeGraph) {
+      this.knowledgeGraph = newKnowledgeGraph;
+
+      const requirementsList = this.getRequirementsList();
+      console.log("Change detected!", requirementsList);
+      this.setState({ requirementsList: requirementsList });
+    }
+  }
+
+  getRequirementsList = () => {
+    const knowledgeGraph = this.knowledgeGraph;
+    let requirementsList = [];
+    for (const item of knowledgeGraph) {
+      requirementsList.push(item);
+      for (const altElement of item.alternatives ?? []) {
+        requirementsList.push(altElement);
+      }
+    }
+    return requirementsList;
   }
 
   toggleCollapse = () => {
@@ -135,6 +154,19 @@ export class App extends Component {
     return knowledgeGraphTree;
   }
 
+  searchRequirements = (searchString) => {
+    const requirementsList = this.state.requirementsList;
+    for (const requirement of requirementsList) {
+      const searchTarget = requirement.type + ' : ' + (requirement.title ?? requirement.name);
+      if (searchTarget.includes(searchString)) {
+        requirement.show = true;
+      } else {
+        requirement.show = false;
+      }
+    }
+    this.setState({ requirementsList: requirementsList });
+  }
+
   search = (searchString, knowledgeGraphTree = null) => {
     console.log("search", searchString);
     let rootElement = false;
@@ -173,7 +205,7 @@ export class App extends Component {
 
   render () {return (
     <>
-      <Container>
+      <Container fluid>
         <Row className='pb-3'>
           <Col>
             <h1>verdatas preact knowledge graph editor</h1>
@@ -191,8 +223,8 @@ export class App extends Component {
           </Col>
         </Row>
         <Row>
-          <Col lg={6} >
-            <h2>Knowledge Graph Objects</h2>
+          <Col lg={4} >
+            <h2>Learning Objects</h2>
             <InputGroup>
               <Button onClick={this.toggleCollapse} variant="primary">{this.state.collapsed ? 'Show' : 'Collapse'} all</Button>
               <Form.Control onChange={(input) => this.search(input.target.value)} placeholder="Search by type or name ..."></Form.Control>
@@ -208,7 +240,14 @@ export class App extends Component {
             <KnowledgeGraphTree knowledgeGraphTree={this.initialList} updateCollapsed={this.updateCollapsed}/>}
             </div>
           </Col>
-          <Col lg={6}>
+          <Col lg={3}>
+            <h2>Requirements</h2>
+            <div className="overflow-scroll" style={{maxHeight: '75vh'}}>
+              <Form.Control onChange={(input) => this.searchRequirements(input.target.value)} placeholder="Search by type or name ..."></Form.Control>
+              <KnowledgeGraphRequirements requirementsList={this.state.requirementsList}/>
+            </div>
+          </Col>
+          <Col lg={5}>
             <h2>Learning Path</h2>
             <KnowledgeGraphEditor knowledgeGraph={this.initKnowledgeGraph} onChange={this.onChange} />
           </Col>
