@@ -24,18 +24,52 @@ export class KnowledgeGraphEditor extends Component {
             nextProps.onChange(nextState.knowledgeGraph);
         }
     }
+
+    countItemsWithObjectId = (objectId) => {
+        const knowledgeGraph = this.state.knowledgeGraph;
+        let count = 0;
+        for (const item of knowledgeGraph) {
+            if (item.objectId == objectId) {
+              count++;
+            }
+        }
+        return count;
+    }
   
     rootSetter = (graph) => {
-      this.setState({ knowledgeGraph: graph });
+      let newGraph = [];
+      for (const item of graph) {
+        if (!item.uniqueId) {
+          console.log("Generate new Unique ID!");
+          let uniqueId = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+          let countId = this.countItemsWithObjectId(item.objectId) + 1;
+          console.log(countId);
+          let newItem = Object.assign({}, item);
+          newItem.id = uniqueId;
+          newItem.uniqueId = uniqueId;
+          if (countId > 1) {
+            if (newItem.title) {
+              newItem.title = newItem.title + " " + '#'+countId+'';
+            } else {
+              newItem.name = newItem.name + " " + '#'+countId+'';
+            }
+          }
+
+          newGraph.push(newItem);
+        } else {
+          newGraph.push(item);
+        }
+      }
+      this.setState({ knowledgeGraph: newGraph });
       //console.log("RootSetter", graph);
     }
   
-    requirementSetter = (requirements, objectId) => {
+    requirementSetter = (requirements, id) => {
       //console.log("RequirementSetter OID", objectId)
       //console.log("RequirementSetter Reqs", requirements);
       var newKnowledgeGraph = this.state.knowledgeGraph;
       for (var i = 0; i < newKnowledgeGraph.length; i++) {
-        if (newKnowledgeGraph[i].objectId == objectId) {
+        if (newKnowledgeGraph[i].id == id) {
           newKnowledgeGraph[i].requirements = requirements;
         }
       }
@@ -43,12 +77,12 @@ export class KnowledgeGraphEditor extends Component {
       this.setState({ knowledgeGraph: newKnowledgeGraph });
     }
   
-    altPathSetter = (alternatives, objectId) => {
+    altPathSetter = (alternatives, id) => {
       //console.log("AltPathSetter OID", objectId)
       //console.log("AltPathSetter Alts", alternatives);
       var newKnowledgeGraph = this.state.knowledgeGraph;
       for (var i = 0; i < newKnowledgeGraph.length; i++) {
-        if (newKnowledgeGraph[i].objectId == objectId) {
+        if (newKnowledgeGraph[i].id == id) {
           newKnowledgeGraph[i].alternatives = alternatives;
         }
       }
@@ -78,9 +112,9 @@ export class KnowledgeGraphEditor extends Component {
                     <ReactSortable className="h-100 w-100"
                       list={item.requirements ?? []}
                       setList={(requirementList) => {
-                        self.requirementSetter(requirementList, item.objectId);
+                        self.requirementSetter(requirementList, item.id);
                       }}
-                      group="knowledgePathEditor">
+                      group="knowledgePathRequirements">
                       {item.requirements && item.requirements.map((requirement) => (
                         <KnowledgeGraphObject variant="danger" item={requirement} />
                       ))}
@@ -93,7 +127,7 @@ export class KnowledgeGraphEditor extends Component {
                     <ReactSortable className="h-100 w-100"
                       list={item.alternatives ?? []}
                       setList={(alternativePath) => {
-                        self.altPathSetter(alternativePath, item.objectId);
+                        self.altPathSetter(alternativePath, item.id);
                       }}
                       group="knowledgePathEditor">
                       {item.alternatives && item.alternatives.map((alternative) => (
