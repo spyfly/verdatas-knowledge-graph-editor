@@ -235,6 +235,13 @@ export class App extends Component {
             <h5>Please upload the knowledgeGraph XML File first</h5> 
             <p>The knowledge graph elements will appear here.</p>
             <p>Use the file picker above to select the knowledgeGraph XML file!</p>
+            <p>Alternatively, <Button variant="link" onClick={
+              async () =>{
+                const knowledgeGraphXmlReq = await fetch('./raw-knowledge-graph.xml');
+                const rawXml = await knowledgeGraphXmlReq.text();
+                this.initItemList(rawXml);
+              }
+            }>use example XML</Button></p>
             </div>
             : 
             <KnowledgeGraphTree knowledgeGraphTree={this.initialList} updateCollapsed={this.updateCollapsed}/>}
