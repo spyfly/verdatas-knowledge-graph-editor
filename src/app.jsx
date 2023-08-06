@@ -158,7 +158,7 @@ export class App extends Component {
     const requirementsList = this.state.requirementsList;
     for (const requirement of requirementsList) {
       const searchTarget = requirement.type + ' : ' + (requirement.title ?? requirement.name);
-      if (searchTarget.includes(searchString)) {
+      if (searchTarget.toLocaleLowerCase().includes(searchString.toLocaleLowerCase())) {
         requirement.show = true;
       } else {
         requirement.show = false;
@@ -178,7 +178,7 @@ export class App extends Component {
     const searchTarget = knowledgeGraphTree.type + ' : ' + (knowledgeGraphTree.title ?? knowledgeGraphTree.name);
     knowledgeGraphTree.collapsed = true;
     knowledgeGraphTree.show = false;
-    if (searchTarget.includes(searchString)) {
+    if (searchTarget.toLocaleLowerCase().includes(searchString.toLocaleLowerCase())) {
       knowledgeGraphTree.collapsed = false;
       knowledgeGraphTree.show = true;
     }
