@@ -14,7 +14,7 @@ export function KnowledgeGraphRequirements(props) {
         delay={2}
       >
         {props.requirementsList.map((item) => (
-          (item.show ?? false) ? <KnowledgeGraphObject variant="danger" item={item}></KnowledgeGraphObject> : null
+          <KnowledgeGraphObject show={(item.show ?? false)} variant="danger" item={item}></KnowledgeGraphObject>
         ))}
       </ReactSortable>
     </ListGroup>
