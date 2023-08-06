@@ -21,7 +21,7 @@ export class App extends Component {
   constructor() {
     super();
     this.state = { knowledgeGraph: [], collapsed: false, requirementsList: [] };
-    this.pendingUploadGraph = [];
+    this.pendingUploadGraph = null;
     this.knowledgeGraph = [];
     this.initKnowledgeGraph = [];
     this.initialList = [];
@@ -117,8 +117,12 @@ export class App extends Component {
 
   importJson = () => {
     console.log(this.pendingUploadGraph)
-    this.initKnowledgeGraph = this.pendingUploadGraph;
-    this.forceUpdate();
+    if (this.pendingUploadGraph !== null) {
+      this.initKnowledgeGraph = this.pendingUploadGraph;
+      this.forceUpdate();
+    } else {
+      alert("Please select a file for import first!")
+    }
   }
 
   updateCollapsed = (objectId, knowledgeGraphTree = null, force = null) => {
