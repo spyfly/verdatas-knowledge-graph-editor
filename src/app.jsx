@@ -15,6 +15,7 @@ import { KnowledgeGraphObject } from "./knowledgeGraphObject";
 import { KnowledgeGraphTree } from "./knowledgeGraphTree";
 import { ButtonGroup, FormText } from "react-bootstrap";
 import { KnowledgeGraphRequirements } from "./knowledgeGraphRequirements";
+import { Trash } from "react-bootstrap-icons";
 
 export class App extends Component {
   constructor() {
@@ -249,13 +250,19 @@ export class App extends Component {
           </Col>
           <Col lg={3}>
             <h2>Requirements</h2>
+            <Form.Control onChange={(input) => this.searchRequirements(input.target.value)} placeholder="Search by type or name ..."></Form.Control>
             <div className="overflow-scroll" style={{maxHeight: '75vh'}}>
-              <Form.Control onChange={(input) => this.searchRequirements(input.target.value)} placeholder="Search by type or name ..."></Form.Control>
               <KnowledgeGraphRequirements requirementsList={this.state.requirementsList}/>
             </div>
           </Col>
           <Col lg={5}>
             <h2>Learning Path</h2>
+            <ReactSortable list={[]} setList={() => {}} group={{
+              put: ['knowledgePathEditor', 'knowledgePathRequirements'],
+            }} style="height: 38px;" className="w-100"
+          >
+              <div class="p-2 bg-secondary bg-opacity-50"><Trash></Trash> Papierkorb</div>
+            </ReactSortable>
             <KnowledgeGraphEditor knowledgeGraph={this.initKnowledgeGraph} onChange={this.onChange} />
           </Col>
         </Row>
