@@ -162,7 +162,7 @@ export class App extends Component {
   searchRequirements = (searchString) => {
     const requirementsList = this.state.requirementsList;
     for (const requirement of requirementsList) {
-      const searchTarget = requirement.type + ' : ' + (requirement.title ?? requirement.name);
+      const searchTarget = requirement.type + ' : ' + (requirement.title ?? requirement.name) + ' : ' + requirement.objectId;
       if (searchTarget.toLocaleLowerCase().includes(searchString.toLocaleLowerCase())) {
         requirement.show = true;
       } else {
@@ -180,7 +180,7 @@ export class App extends Component {
       rootElement = true;
     }
 
-    const searchTarget = knowledgeGraphTree.type + ' : ' + (knowledgeGraphTree.title ?? knowledgeGraphTree.name);
+    const searchTarget = knowledgeGraphTree.type + ' : ' + (knowledgeGraphTree.title ?? knowledgeGraphTree.name) + ' : ' + knowledgeGraphTree.objectId;
     knowledgeGraphTree.collapsed = true;
     knowledgeGraphTree.show = false;
     if (searchTarget.toLocaleLowerCase().includes(searchString.toLocaleLowerCase())) {
@@ -232,7 +232,7 @@ export class App extends Component {
             <h2>Learning Objects</h2>
             <InputGroup>
               <Button onClick={this.toggleCollapse} variant="primary">{this.state.collapsed ? 'Show' : 'Collapse'} all</Button>
-              <Form.Control onChange={(input) => this.search(input.target.value)} placeholder="Search by type or name ..."></Form.Control>
+              <Form.Control onChange={(input) => this.search(input.target.value)} placeholder="Search by type, name or objectId ..."></Form.Control>
             </InputGroup>
             <div className="overflow-scroll" style={{maxHeight: '75vh'}}>
             {this.initialList.length === 0 ? 
@@ -254,7 +254,7 @@ export class App extends Component {
           </Col>
           <Col lg={3}>
             <h2>Requirements</h2>
-            <Form.Control onChange={(input) => this.searchRequirements(input.target.value)} placeholder="Search by type or name ..."></Form.Control>
+            <Form.Control onChange={(input) => this.searchRequirements(input.target.value)} placeholder="Search by type, name or objectId ..."></Form.Control>
             <div className="overflow-scroll" style={{maxHeight: '75vh'}}>
               <KnowledgeGraphRequirements requirementsList={this.state.requirementsList}/>
             </div>
